@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Rock, Paper, Scissors 👊📄✂</h1>
+      <div class="options-container" data-options>
+        <button data-option value="rock">👊Rock</button>
+        <button data-option value="paper">📄Paper</button>
+        <button data-option value="scissors">✂Scissors</button>
+      </div>
+      <div class="players">
+        <span>Your choice: <b data-you>null</b></span>
+        <span>Computer choice: <b data-computer>null</b></span>
+      </div>
+      <h1  data-winner aria-hidden="true" class="winner"></h1>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
