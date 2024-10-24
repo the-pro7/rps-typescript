@@ -27,7 +27,7 @@ The site will be going life in the not so distant future, so hold your horses! W
 Be sure to send your pull requests if you think you've got something much interesting to add! I'd be happy to merge them😆😁!
 
 ## Enquire more (not necessary but, well 😅)
-Contact moi: ameyawemmanuel900@gmail.com
+Contact moi: ameyawemmanuel900@gmail.com . I'd be happy to reply!
 
 
 **Made with love for TypeScript💙. [Learn it now!](https://www.typescriptlang.org/)**
