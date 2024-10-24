@@ -6,11 +6,22 @@ const computerChoice = document.querySelector(
   "[data-computer]"
 ) as HTMLSpanElement;
 const winner = document.querySelector("[data-winner]") as HTMLHeadingElement;
+const playerScoreEl = document.querySelector(
+  "[data-player-score]"
+) as HTMLSpanElement;
+const computerScoreEl = document.querySelector(
+  "[data-computer-score]"
+) as HTMLSpanElement;
 
+// Config
 const choices: string[] = ["rock", "paper", "scissors"];
 let playerOption: string = "";
 let computerOption: string = "";
-let isOver: boolean = false;
+
+// Score holders
+let playerScore: number = 0;
+let computerScore: number = 0;
+const winningScore: number = 20;
 
 const game: Record<string, Record<any, string>> = {
   rock: {
@@ -48,15 +59,41 @@ gameOptions.forEach((option) => {
   });
 });
 
+function announceOverallWinner(): void {
+  if (playerScore === winningScore) {
+    alert("Player is the overall winner! 🎊");
+    resetParams();
+  } else if (computerScore === winningScore) {
+    alert("Computer is the overall winner! 🎊");
+    resetParams();
+  }
+}
+
+function resetParams(): void {
+  playerChoice.textContent = "null";
+  computerChoice.textContent = "null";
+  playerScoreEl.textContent = "0";
+  computerScoreEl.textContent = "0";
+  computerOption = "";
+  playerOption = "";
+  playerScore = 0;
+  computerScore = 0;
+  winner.textContent = "";
+}
+
 function announceWinner() {
   if (playerOption === computerOption) {
     winner.textContent = "It's a draw 😲!";
-    isOver = true;
+    playerScore = playerScore;
+    computerScore = computerScore;
   } else if (game[playerOption].beats === computerOption) {
+    playerScore++;
+    playerScoreEl.textContent = String(playerScore);
     winner.textContent = "Player wins! 🎉";
-    isOver = true;
   } else {
+    computerScore++;
+    computerScoreEl.textContent = String(computerScore);
     winner.textContent = "Computer wins! 🤖";
-    isOver = true;
   }
+  announceOverallWinner();
 }

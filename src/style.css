@@ -27,15 +27,16 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
 }
 
-h1 {
+.title {
   font-size: clamp(2em, 11vw, 4em);
+  text-align: center;
 }
 
 #app {
@@ -43,6 +44,10 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  width: 90%;
+  margin-inline: auto;
 }
 
 .options-container {
@@ -90,8 +95,13 @@ button:focus-visible {
 }
 
 .winner {
-  font-size: clamp(.8rem, 5vw, 2rem);
+  font-size: clamp(0.8rem, 5vw, 2rem);
 }
+
+.winning-info {
+   
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
