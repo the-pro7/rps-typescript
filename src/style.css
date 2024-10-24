@@ -99,7 +99,7 @@ button:focus-visible {
 }
 
 .winning-info {
-   
+   font-size: 1.2em;
 }
 
 @media (prefers-color-scheme: light) {

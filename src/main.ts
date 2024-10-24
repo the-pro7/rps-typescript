@@ -42,7 +42,7 @@ function random(): number {
   return Math.floor(Math.random() * choices.length);
 }
 
-function computer() {
+function computer(): void {
   const choice = choices[random()];
   computerChoice.textContent = choice;
   computerOption = choice;
@@ -61,7 +61,7 @@ gameOptions.forEach((option) => {
 
 function announceOverallWinner(): void {
   if (playerScore === winningScore) {
-    alert("Player is the overall winner! 🎊");
+    alert("You are the overall winner! 🎊");
     resetParams();
   } else if (computerScore === winningScore) {
     alert("Computer is the overall winner! 🎊");
@@ -89,7 +89,7 @@ function announceWinner() {
   } else if (game[playerOption].beats === computerOption) {
     playerScore++;
     playerScoreEl.textContent = String(playerScore);
-    winner.textContent = "Player wins! 🎉";
+    winner.textContent = "You win! 🎉";
   } else {
     computerScore++;
     computerScoreEl.textContent = String(computerScore);
