@@ -15,9 +15,9 @@ This is a minimalistic rock, paper, scissors game made with TypeScript which is 
 - Vanilla HTML
 - Vanilla CSS
 
-## Wanna play?
+## Wanna play🏓?
 
-The site will be going life in the not so distant future, so hold your horses! Well you can also clone the repo using:
+The site will be is live here: [RPS Game](the-pro7.github.io/rps-typescript/). Well you can also clone the repo for your own fun using:
 
 - `git clone https://github.com/the-pro7/rps-typescript.git`
 - `npm install` to install all dependencies
